@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Cosecha Comercializadora | Mayoristas de Frutas y Verduras - Armenia, Quindío</title>
+  
+  <!-- Google Fonts Oficiales según Manual de Marca: Fredoka (Zuume Rough), Baloo 2 (Black Bones), Quicksand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fredoka:wght@600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              verde: '#2D8438',      /* Verde Cosecha - Principal */
+              verdeHoja: '#7DBC1E',  /* Verde Hoja - Secundario */
+              amarillo: '#F5C518',   /* Amarillo Brillante - Acento */
+              rojo: '#DF2723',       /* Rojo Fruta - CTAs */
+              negro: '#1A1A1A',      /* Negro contornos */
+              crema: '#F7F2E7',      /* Crema neutro */
+              verdeOscuro: '#175122' /* Verde profundo sombra */
+            }
+          },
+          fontFamily: {
+            display: ['Fredoka', 'sans-serif'],    /* Para Títulos de impacto */
+            subheading: ['Baloo 2', 'sans-serif'], /* Para Subtítulos y Botones */
+            body: ['Quicksand', 'sans-serif']      /* Para Textos y Fichas */
+          },
+          boxShadow: {
+            'brand': '5px 5px 0px #1A1A1A',
+            'brand-sm': '3px 3px 0px #1A1A1A',
+            'brand-lg': '8px 8px 0px #1A1A1A',
+            'brand-yellow': '5px 5px 0px #F5C518'
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #F7F2E7;
+      color: #1A1A1A;
+    }
+    
+    h1, h2, h3, .font-display {
+      font-family: 'Fredoka', cursive, sans-serif;
+    }
+    
+    .font-subheading {
+      font-family: 'Baloo 2', cursive, sans-serif;
+    }
+    
+    /* Borde negro con grosor característico del manual */
+    .borde-manual {
+      border: 3px solid #1A1A1A;
+    }
+
+    .borde-manual-sm {
+      border: 2px solid #1A1A1A;
+    }
+    
+    /* Efecto de botón tipo manual de marca */
+    .btn-brutal {
+      transition: all 0.15s ease-in-out;
+      border: 3px solid #1A1A1A;
+      box-shadow: 4px 4px 0px #1A1A1A;
+    }
+    .btn-brutal:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px #1A1A1A;
+    }
+    .btn-brutal:active {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px #1A1A1A;
+    }
+
+    /* Scrollbar personalizada */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F7F2E7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2D8438;
+      border: 2px solid #1A1A1A;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-amarillo selection:text-brand-negro">
+
+  <!-- Barra superior informativa (Armenia - Central Mayorista Mercar) -->
+  <div class="bg-brand-negro text-white py-2 px-4 text-xs sm:text-sm font-semibold border-b-2 border-brand-negro">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-2">
+        <span class="bg-brand-rojo text-white px-2 py-0.5 rounded-md font-bold text-xs uppercase tracking-wider">Mayoristas</span>
+        <span><i class="fa-solid fa-location-dot text-brand-amarillo mr-1"></i> Cra. 19 #40, Armenia, Quindío (A 5 km de Central Mayorista Mercar)</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span><i class="fa-solid fa-award text-brand-amarillo mr-1"></i> 25 Años en el mercado • Normas ISO</span>
+        <a href="tel:3137220982" class="hover:text-brand-amarillo font-bold flex items-center gap-1 transition">
+          <i class="fa-solid fa-phone text-brand-verdeHoja"></i> 313 722 0982
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra de Navegación Principal con Logo Oficial Exacto -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b-4 border-brand-negro shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-24">
+        
+        <!-- LOGO OFICIAL VECTORIAL EXACTO (Manual de Marca de Mi Cosecha Comercializadora) -->
+        <a href="#inicio" class="flex items-center gap-2 group py-1" title="Mi Cosecha Comercializadora">
+          <div class="relative bg-white px-3 py-1.5 rounded-2xl border-3 border-brand-negro shadow-brand-sm group-hover:shadow-brand transition-all">
+            <svg class="h-16 sm:h-20 w-auto" viewBox="0 0 460 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <!-- Hoja Roja con gradiente cálido -->
+                <linearGradient id="navRedGrad" x1="170" y1="140" x2="260" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#C51815"/>
+                  <stop offset="50%" stop-color="#DF2723"/>
+                  <stop offset="100%" stop-color="#F24430"/>
+                </linearGradient>
+
+                <!-- Llama amarilla interna -->
+                <linearGradient id="navFlameGrad" x1="210" y1="140" x2="250" y2="85" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#E65100"/>
+                  <stop offset="50%" stop-color="#F5C518"/>
+                  <stop offset="100%" stop-color="#FDE047"/>
+                </linearGradient>
+
+                <!-- Hoja Verde oscura -->
+                <linearGradient id="navGreenDark" x1="280" y1="145" x2="380" y2="20" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#2D8438"/>
+                  <stop offset="50%" stop-color="#4B9A24"/>
+                  <stop offset="100%" stop-color="#7DBC1E"/>
+                </linearGradient>
+
+                <!-- Hoja Verde clara brillante -->
+                <linearGradient id="navGreenLight" x1="290" y1="130" x2="410" y2="10" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#7DBC1E"/>
+                  <stop offset="60%" stop-color="#9AE225"/>
+                  <stop offset="100%" stop-color="#BEF248"/>
+                </linearGradient>
+
+                <!-- Degradado de texto verde inflado -->
+                <linearGradient id="navTextGrad" x1="230" y1="30" x2="230" y2="240" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#3FA84A"/>
+                  <stop offset="35%" stop-color="#2D8438"/>
+                  <stop offset="75%" stop-color="#216E2B"/>
+                  <stop offset="100%" stop-color="#175122"/>
+                </linearGradient>
+              </defs>
+
+              <!-- ISOTIPO: HOJAS OFICIALES -->
+              <!-- Hoja Roja con llama interior -->
+              <g id="leaf-red">
+                <path d="M 172 135 C 160 90, 195 48, 258 42 C 267 76, 264 118, 222 144 C 196 150, 178 146, 172 135 Z" fill="url(#navRedGrad)"/>
+                <path d="M 214 135 C 205 115, 218 95, 252 86 C 248 108, 238 128, 214 135 Z" fill="url(#navFlameGrad)"/>
+              </g>
+
+              <!-- Hoja Verde con nervadura -->
+              <g id="leaf-green">
+                <path d="M 276 138 C 270 95, 290 55, 396 12 C 418 68, 388 125, 305 142 C 290 144, 280 142, 276 138 Z" fill="url(#navGreenDark)"/>
+                <path d="M 288 126 C 290 85, 320 45, 396 12 C 375 75, 350 110, 288 126 Z" fill="url(#navGreenLight)"/>
+                <path d="M 282 136 C 314 96, 352 54, 394 14" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.95"/>
+              </g>
+
+              <!-- BASE AMARILLA: Silueta inferior que bordea las letras -->
+              <path d="M 44 212 C 58 226, 95 232, 130 226 C 158 238, 204 238, 235 228 C 265 242, 310 240, 335 228 C 362 238, 400 234, 420 216 C 428 206, 424 195, 424 195 C 438 215, 416 248, 375 252 C 335 255, 305 248, 280 252 C 240 256, 185 258, 140 252 C 90 248, 40 240, 32 216 C 30 206, 38 198, 44 212 Z" fill="#F5C518"/>
+
+              <!-- CONTORNO NEGRO GRUESO -->
+              <g stroke="#1A1A1A" stroke-width="20" stroke-linejoin="round" stroke-linecap="round">
+                <text x="82" y="128" font-family="'Fredoka', 'Arial Black', sans-serif" font-weight="900" font-size="96" letter-spacing="-3">Mi</text>
+                <text x="48" y="218" font-family="'Fredoka', 'Arial Black', sans-serif" font-weight="900" font-size="108" letter-spacing="-5">Cosecha</text>
+              </g>
+
+              <!-- RELLENO VERDE DEGRADADO -->
+              <text x="82" y="128" font-family="'Fredoka', 'Arial Black', sans-serif" font-weight="900" font-size="96" letter-spacing="-3" fill="url(#navTextGrad)">Mi</text>
+              <text x="48" y="218" font-family="'Fredoka', 'Arial Black', sans-serif" font-weight="900" font-size="108" letter-spacing="-5" fill="url(#navTextGrad)">Cosecha</text>
+
+              <!-- BRILLOS VOLUMÉTRICOS -->
+              <g fill="#7DBC1E" opacity="0.6">
+                <ellipse cx="152" cy="154" rx="8" ry="4" transform="rotate(-20 152 154)"/>
+                <ellipse cx="204" cy="150" rx="8" ry="4" transform="rotate(-15 204 150)"/>
+                <ellipse cx="256" cy="152" rx="7" ry="4" transform="rotate(-10 256 152)"/>
+              </g>
+
+              <!-- PALABRA COMERCIALIZADORA (En negro sobre fondo claro según Manual pág. 4 & 6) -->
+              <text x="235" y="286" text-anchor="middle" font-family="'Quicksand', sans-serif" font-weight="800" font-size="28" fill="#1A1A1A" letter-spacing="7">COMERCIALIZADORA</text>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Enlaces del Menú Desktop -->
+        <nav class="hidden md:flex items-center gap-6 font-subheading text-lg font-bold">
+          <a href="#inicio" class="text-brand-negro hover:text-brand-verde transition pb-1 border-b-2 border-transparent hover:border-brand-verde">Inicio</a>
+          <a href="#nosotros" class="text-brand-negro hover:text-brand-verde transition pb-1 border-b-2 border-transparent hover:border-brand-verde">Quiénes Somos</a>
+          <a href="#mercado" class="text-brand-negro hover:text-brand-verde transition pb-1 border-b-2 border-transparent hover:border-brand-verde">Catálogo Mayorista</a>
+          <a href="#calidad" class="text-brand-negro hover:text-brand-verde transition pb-1 border-b-2 border-transparent hover:border-brand-verde">Normas ISO</a>
+          <a href="#contacto" class="text-brand-negro hover:text-brand-verde transition pb-1 border-b-2 border-transparent hover:border-brand-verde">Contacto B2B</a>
+        </nav>
+
+        <!-- Botones de Acción (Carrito y Cotización Directa) -->
+        <div class="flex items-center gap-3">
+          <!-- Botón de Carrito Mayorista -->
+          <button id="cartBtn" onclick="toggleCart()" class="relative btn-brutal bg-brand-amarillo text-brand-negro px-4 py-2.5 rounded-xl font-subheading font-bold flex items-center gap-2">
+            <i class="fa-solid fa-cart-flatbed text-lg"></i>
+            <span class="hidden sm:inline">Pedido Mayorista</span>
+            <span id="cartCountBadge" class="bg-brand-rojo text-white text-xs px-2 py-0.5 rounded-full border-2 border-brand-negro font-extrabold">0</span>
+          </button>
+
+          <!-- Botón WhatsApp Rápido -->
+          <a href="https://wa.me/573137220982?text=Hola%20Mi%20Cosecha%20Comercializadora,%20deseo%20cotizar%20un%20pedido%20mayorista." target="_blank" class="hidden lg:flex btn-brutal bg-brand-verde text-white px-4 py-2.5 rounded-xl font-subheading font-bold items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <span>Cotizar Ya</span>
+          </a>
+
+          <!-- Botón Menú Mobile -->
+          <button onclick="toggleMobileMenu()" class="md:hidden btn-brutal bg-white p-2 rounded-xl text-brand-negro">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú Móvil Desplegable -->
+    <div id="mobileMenu" class="hidden md:hidden bg-brand-crema border-t-2 border-brand-negro px-4 py-4 space-y-3 font-subheading font-bold text-lg">
+      <a href="#inicio" onclick="toggleMobileMenu()" class="block py-2 text-brand-negro hover:text-brand-verde">Inicio</a>
+      <a href="#nosotros" onclick="toggleMobileMenu()" class="block py-2 text-brand-negro hover:text-brand-verde">Quiénes Somos</a>
+      <a href="#mercado" onclick="toggleMobileMenu()" class="block py-2 text-brand-negro hover:text-brand-verde">Catálogo Mayorista</a>
+      <a href="#calidad" onclick="toggleMobileMenu()" class="block py-2 text-brand-negro hover:text-brand-verde">Normas ISO de Calidad</a>
+      <a href="#contacto" onclick="toggleMobileMenu()" class="block py-2 text-brand-negro hover:text-brand-verde">Contacto Mayorista</a>
+      <a href="https://wa.me/573137220982" target="_blank" class="w-full btn-brutal bg-brand-verde text-white text-center py-2.5 rounded-xl block">
+        <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp: 313 722 0982
+      </a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- SECCIÓN HERO: En Verde Cosecha dominante (Pauta de Color pág. 4: Verde como fondo protagónico) -->
+    <section id="inicio" class="relative bg-brand-verde text-white border-b-4 border-brand-negro overflow-hidden py-14 lg:py-20">
+      <!-- Decoración de fondo con siluetas de hojas y texturas campestres -->
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <pattern id="leaf-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M 0 10 C 5 0, 15 0, 20 10 C 15 20, 5 20, 0 10 Z" fill="#FFFFFF"/>
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#leaf-pattern)"/>
+        </svg>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Texto Principal del Hero -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 bg-brand-amarillo text-brand-negro px-4 py-1.5 rounded-full font-subheading font-extrabold text-sm sm:text-base border-2 border-brand-negro shadow-brand-sm">
+              <i class="fa-solid fa-truck-ramp-box text-brand-rojo"></i>
+              <span>CENTRAL DE DISTRIBUCIÓN QUINDIANA • ARMENIA</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-black leading-tight tracking-tight text-white drop-shadow-[2px_2px_0px_#1A1A1A]">
+              DEL CAMPO <span class="text-brand-amarillo underline decoration-brand-rojo decoration-wavy decoration-4">A TU MESA</span> AL POR MAYOR
+            </h1>
+
+            <p class="text-lg sm:text-xl font-medium text-brand-crema max-w-2xl leading-relaxed">
+              Comercializadora líder del Quindío con <strong>25 años de trayectoria</strong> en el mercado y <strong>12 años</strong> abasteciendo a las grandes cadenas y supermercados del país con frutas y verduras seleccionadas bajo estrictas <strong>normas de calidad ISO</strong>.
+            </p>
+
+            <!-- Acciones Principales -->
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a href="#mercado" class="btn-brutal bg-brand-amarillo text-brand-negro px-6 py-3.5 rounded-xl font-subheading font-black text-lg flex items-center gap-3">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <span>Ver Catálogo en Canastilla y Bulto</span>
+              </a>
+              <a href="https://wa.me/573137220982?text=Buenos%20d%C3%ADas,%20solicito%20cotizaci%C3%B3n%20para%20despacho%20mayorista." target="_blank" class="btn-brutal bg-brand-rojo text-white px-6 py-3.5 rounded-xl font-subheading font-bold text-lg flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                <span>Línea Directa Comercial</span>
+              </a>
+            </div>
+
+            <!-- Indicadores Clave del Manual de Marca (Pág. 3) -->
+            <div class="grid grid-cols-3 gap-3 pt-6 border-t-2 border-white/30">
+              <div class="bg-brand-verdeOscuro/60 p-3 rounded-xl border-2 border-brand-negro text-center">
+                <span class="block font-display text-3xl sm:text-4xl font-black text-brand-amarillo">25</span>
+                <span class="text-xs sm:text-sm font-semibold text-stone-200 leading-tight">Años de trayectoria en el mercado</span>
+              </div>
+              <div class="bg-brand-verdeOscuro/60 p-3 rounded-xl border-2 border-brand-negro text-center">
+                <span class="block font-display text-3xl sm:text-4xl font-black text-brand-amarillo">12</span>
+                <span class="text-xs sm:text-sm font-semibold text-stone-200 leading-tight">Años entregando a almacenes de cadena</span>
+              </div>
+              <div class="bg-brand-verdeOscuro/60 p-3 rounded-xl border-2 border-brand-negro text-center">
+                <span class="block font-display text-3xl sm:text-4xl font-black text-brand-amarillo">ISO</span>
+                <span class="text-xs sm:text-sm font-semibold text-stone-200 leading-tight">Normas de calidad certificadas</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta Visual Destacada de Despacho Quindiano -->
+          <div class="lg:col-span-5">
+            <div class="bg-brand-crema text-brand-negro p-6 rounded-3xl borde-manual shadow-brand-lg relative">
+              <div class="absolute -top-4 -right-4 bg-brand-rojo text-white px-4 py-1 rounded-xl font-subheading font-black text-sm border-2 border-brand-negro transform rotate-2 shadow-brand-sm">
+                ¡COSECHAS FRESCAS TODOS LOS DÍAS!
+              </div>
+
+              <div class="space-y-4">
+                <div class="flex items-center gap-3 pb-3 border-b-2 border-brand-negro/20">
+                  <div class="w-12 h-12 rounded-xl bg-brand-amarillo border-2 border-brand-negro flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-warehouse text-brand-negro"></i>
+                  </div>
+                  <div>
+                    <h2 class="font-display font-black text-xl leading-none">Centro Logístico Armenia</h2>
+                    <p class="text-xs font-semibold text-stone-600 mt-1">A 05 km de la Central Mayorista Mercar</p>
+                  </div>
+                </div>
+
+                <p class="text-sm font-medium text-stone-700 leading-snug">
+                  Abastecemos a distribuidores, almacenes de grandes superficies, plazas de mercado e industrias de alimentos de Colombia con trazabilidad y calibración uniforme.
+                </p>
+
+                <!-- Rutas Estratégicas desde Armenia -->
+                <div class="bg-white p-3.5 rounded-xl border-2 border-brand-negro space-y-2 text-xs font-semibold">
+                  <div class="flex justify-between items-center text-stone-800">
+                    <span><i class="fa-solid fa-check text-brand-verde mr-1"></i> Despachos diarios a Bogotá (Vía La Línea)</span>
+                    <span class="bg-brand-verde/20 text-brand-verde px-2 py-0.5 rounded font-bold">Activo</span>
+                  </div>
+                  <div class="flex justify-between items-center text-stone-800">
+                    <span><i class="fa-solid fa-check text-brand-verde mr-1"></i> Conexión Eje Cafetero & Valle del Cauca</span>
+                    <span class="bg-brand-verde/20 text-brand-verde px-2 py-0.5 rounded font-bold">Activo</span>
+                  </div>
+                  <div class="flex justify-between items-center text-stone-800">
+                    <span><i class="fa-solid fa-check text-brand-verde mr-1"></i> Cadena de frío e higiene de canastillas</span>
+                    <span class="bg-brand-verde/20 text-brand-verde px-2 py-0.5 rounded font-bold">ISO</span>
+                  </div>
+                </div>
+
+                <div class="pt-2 flex items-center justify-between text-xs font-bold text-stone-600">
+                  <span><i class="fa-solid fa-file-invoice text-brand-rojo mr-1"></i> Facturación Electrónica DIAN</span>
+                  <span><i class="fa-solid fa-scale-balanced text-brand-verde mr-1"></i> Pesaje Báscula Certificada</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN QUIÉNES SOMOS Y VALORES (Manual pág. 3: "Quiénes somos y qué comunica nuestra identidad") -->
+    <section id="nosotros" class="py-16 bg-white border-b-4 border-brand-negro">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="bg-brand-amarillo text-brand-negro px-4 py-1 rounded-full font-subheading font-bold text-sm border-2 border-brand-negro uppercase tracking-wider">
+            NUESTRA IDENTIDAD Y TRAYECTORIA
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-display font-black text-brand-negro mt-3 mb-4">
+            Una Comercializadora con Alma Campesina y Calidad Industrial
+          </h2>
+          <p class="text-base sm:text-lg text-stone-700 font-medium">
+            "La identidad de Mi Cosecha es vívida, cercana y directa. No buscamos minimalismo: buscamos que la marca se sienta viva, como el producto del campo que entregamos cada mañana."
+          </p>
+        </div>
+
+        <!-- 3 Pilares Fundamentales del Negocio -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Pilar 1: Campo y Red de Productores -->
+          <div class="bg-brand-crema p-6 rounded-2xl borde-manual shadow-brand flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 bg-brand-verde text-white rounded-2xl border-2 border-brand-negro flex items-center justify-center text-2xl mb-4 shadow-brand-sm">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <h3 class="font-display font-black text-2xl text-brand-negro mb-2">Alianzas con el Productor</h3>
+              <p class="text-sm font-medium text-stone-700 leading-relaxed">
+                Trabajamos con una red sólida de campesinos y asociaciones agrícolas del Quindío (Montenegro, Quimbaya, La Tebaida, Calarcá, Circasia, Génova y Pijao) garantizando cosecha constante y precio justo.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t-2 border-stone-300 flex items-center text-xs font-bold text-brand-verde">
+              <span><i class="fa-solid fa-circle-check mr-1"></i> Abastecimiento 365 días del año</span>
+            </div>
+          </div>
+
+          <!-- Pilar 2: 12 Años en Grandes Superficies -->
+          <div class="bg-brand-amarillo/20 p-6 rounded-2xl borde-manual shadow-brand flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 bg-brand-amarillo text-brand-negro rounded-2xl border-2 border-brand-negro flex items-center justify-center text-2xl mb-4 shadow-brand-sm">
+                <i class="fa-solid fa-store"></i>
+              </div>
+              <h3 class="font-display font-black text-2xl text-brand-negro mb-2">Proveedores de Cadena</h3>
+              <p class="text-sm font-medium text-stone-700 leading-relaxed">
+                Más de una década respondiendo a los estándares más exigentes de supermercados y centrales mayoristas en calibración, maduración controlada, empaque en canastilla limpia y puntualidad en muelle.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t-2 border-stone-300 flex items-center text-xs font-bold text-brand-negro">
+              <span><i class="fa-solid fa-truck-fast mr-1"></i> Despachos consolidados por volumen</span>
+            </div>
+          </div>
+
+          <!-- Pilar 3: Normas ISO Certificadas -->
+          <div class="bg-brand-verdeHoja/20 p-6 rounded-2xl borde-manual shadow-brand flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 bg-brand-verdeHoja text-brand-negro rounded-2xl border-2 border-brand-negro flex items-center justify-center text-2xl mb-4 shadow-brand-sm">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <h3 class="font-display font-black text-2xl text-brand-negro mb-2">Garantía y Normas ISO</h3>
+              <p class="text-sm font-medium text-stone-700 leading-relaxed">
+                Nuestros procesos de selección manual, desinfección, pesaje e inocuidad garantizan una merma mínima para su negocio, asegurando que la fruta llegue con máxima vida de anaquel.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t-2 border-stone-300 flex items-center text-xs font-bold text-brand-rojo">
+              <span><i class="fa-solid fa-shield-halved mr-1"></i> Cumplimiento estricto de inocuidad</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MINI MARKETPLACE MAYORISTA DE FRUTAS (Página 4 del manual: fondo amarillo brillante para catálogo de productos) -->
+    <section id="mercado" class="py-16 bg-brand-amarillo border-b-4 border-brand-negro">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Encabezado de la tienda -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <span class="bg-white text-brand-negro px-4 py-1 rounded-full font-subheading font-bold text-xs sm:text-sm border-2 border-brand-negro uppercase tracking-wider inline-block mb-2">
+              DESPACHO EN CANASTILLAS Y BULTOS
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-brand-negro">
+              Catálogo Mayorista de Frutas
+            </h2>
+            <p class="text-sm sm:text-base font-semibold text-stone-800 mt-1">
+              Seleccione productos por volumen mayorista y consolide su orden para cotizar al instante por WhatsApp.
+            </p>
+          </div>
+
+          <!-- Buscador en Vivo -->
+          <div class="relative w-full md:w-80">
+            <input 
+              type="text" 
+              id="searchInput" 
+              placeholder="Buscar fruta (ej. Plátano, Hass...)" 
+              onkeyup="filterProducts()" 
+              class="w-full pl-10 pr-4 py-3 bg-white rounded-xl borde-manual text-sm font-semibold focus:outline-none focus:ring-4 focus:ring-brand-negro/20"
+            >
+            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-stone-500"></i>
+          </div>
+        </div>
+
+        <!-- Filtros por Categoría de Fruta -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 text-sm font-subheading font-bold no-scrollbar">
+          <button onclick="setCategory('todos')" class="category-btn active btn-brutal bg-brand-negro text-white px-4 py-2 rounded-xl whitespace-nowrap" data-cat="todos">
+            Todas las Frutas
+          </button>
+          <button onclick="setCategory('citricos')" class="category-btn btn-brutal bg-white text-brand-negro px-4 py-2 rounded-xl whitespace-nowrap" data-cat="citricos">
+            Cítricos (Naranja, Limón)
+          </button>
+          <button onclick="setCategory('musaceas')" class="category-btn btn-brutal bg-white text-brand-negro px-4 py-2 rounded-xl whitespace-nowrap" data-cat="musaceas">
+            Plátano & Banano
+          </button>
+          <button onclick="setCategory('cordillera')" class="category-btn btn-brutal bg-white text-brand-negro px-4 py-2 rounded-xl whitespace-nowrap" data-cat="cordillera">
+            Cordillera (Hass, Lulo, Maracuyá)
+          </button>
+          <button onclick="setCategory('tropicales')" class="category-btn btn-brutal bg-white text-brand-negro px-4 py-2 rounded-xl whitespace-nowrap" data-cat="tropicales">
+            Tropicales (Piña, Papaya, Mango)
+          </button>
+        </div>
+
+        <!-- Grilla de Productos Dinámicos -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Renderizado dinámico con JavaScript -->
+        </div>
+
+        <!-- Banner de Pedidos Especiales y Camión Completo -->
+        <div class="mt-12 bg-white rounded-2xl borde-manual p-6 sm:p-8 shadow-brand-lg flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 rounded-2xl bg-brand-rojo text-white flex items-center justify-center text-3xl borde-manual shadow-brand-sm shrink-0">
+              <i class="fa-solid fa-truck"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-black text-2xl text-brand-negro">¿Necesita un Viaje Completo (Turbo o Sencillo)?</h3>
+              <p class="text-sm font-semibold text-stone-600 mt-1">
+                Atendemos contratos de suministro continuo para cadenas de restaurantes, hoteles y plantas agroindustriales con precio congelado por volumen.
+              </p>
+            </div>
+          </div>
+          <a href="https://wa.me/573137220982?text=Deseo%20cotizar%20un%20viaje%20de%20camion%20completo%20de%20fruta." target="_blank" class="btn-brutal bg-brand-verde text-white px-6 py-3 rounded-xl font-subheading font-black whitespace-nowrap flex items-center gap-2">
+            <i class="fa-solid fa-file-contract"></i>
+            <span>Solicitar Cotización de Carga</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE CALIDAD ISO Y OPERACIÓN (Página 3 y 4 del Manual) -->
+    <section id="calidad" class="py-16 bg-brand-crema border-b-4 border-brand-negro">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-block bg-brand-rojo text-white px-4 py-1 rounded-full font-subheading font-bold text-xs sm:text-sm border-2 border-brand-negro uppercase">
+              ESTÁNDARES CERTIFICADOS
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-display font-black text-brand-negro leading-tight">
+              Cumplimiento Riguroso de Normas ISO de Calidad
+            </h2>
+            <p class="text-stone-700 text-base font-medium leading-relaxed">
+              En Mi Cosecha Comercializadora cada fruta que sale de nuestro centro de acopio en Armenia cuenta con inspección fitosanitaria, clasificación por calibres homogéneos y acondicionamiento en canastillas lavadas y desinfectadas.
+            </p>
+
+            <div class="space-y-3">
+              <div class="bg-white p-4 rounded-xl borde-manual-sm shadow-brand-sm flex items-start gap-3">
+                <i class="fa-solid fa-temperature-arrow-down text-brand-verde text-xl mt-0.5"></i>
+                <div>
+                  <h3 class="font-display font-black text-base text-brand-negro">Conservación de Cadena de Frío</h3>
+                  <p class="text-xs font-semibold text-stone-600">Monitoreo térmico desde la recolección en finca hasta la carga en furgones termoking.</p>
+                </div>
+              </div>
+
+              <div class="bg-white p-4 rounded-xl borde-manual-sm shadow-brand-sm flex items-start gap-3">
+                <i class="fa-solid fa-arrows-split-up-and-left text-brand-amarillo text-xl mt-0.5"></i>
+                <div>
+                  <h3 class="font-display font-black text-base text-brand-negro">Calibración Homogénea</h3>
+                  <p class="text-xs font-semibold text-stone-600">Clasificación precisa por tamaños (Extra, Primera y Segunda) sin mezcla de calidades.</p>
+                </div>
+              </div>
+
+              <div class="bg-white p-4 rounded-xl borde-manual-sm shadow-brand-sm flex items-start gap-3">
+                <i class="fa-solid fa-hand-holding-dollar text-brand-rojo text-xl mt-0.5"></i>
+                <div>
+                  <h3 class="font-display font-black text-base text-brand-negro">Reposición Garantizada</h3>
+                  <p class="text-xs font-semibold text-stone-600">Póliza de satisfacción comercial: reponemos cualquier canastilla con merma fuera de tolerancia.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha de Datos Corporativos de la Comercializadora -->
+          <div class="lg:col-span-6">
+            <div class="bg-white rounded-3xl borde-manual p-6 sm:p-8 shadow-brand-lg">
+              <h3 class="font-display font-black text-2xl text-brand-negro pb-3 border-b-2 border-brand-negro flex items-center justify-between">
+                <span>Ficha Comercial Mayorista</span>
+                <span class="text-xs font-subheading bg-brand-amarillo text-brand-negro px-2.5 py-1 rounded-md border-2 border-brand-negro">2026</span>
+              </h3>
+
+              <dl class="divide-y divide-stone-200 text-sm mt-4">
+                <div class="py-3 flex justify-between items-center">
+                  <dt class="font-bold text-stone-500">Razón Social:</dt>
+                  <dd class="font-black text-brand-negro text-right">Mi Cosecha Comercializadora S.A.S.</dd>
+                </div>
+                <div class="py-3 flex justify-between items-center">
+                  <dt class="font-bold text-stone-500">Sede Principal:</dt>
+                  <dd class="font-bold text-brand-negro text-right">Cra. 19 #40, Armenia, Quindío</dd>
+                </div>
+                <div class="py-3 flex justify-between items-center">
+                  <dt class="font-bold text-stone-500">Punto Logístico:</dt>
+                  <dd class="font-bold text-brand-negro text-right">05 km Central Mayorista Mercar</dd>
+                </div>
+                <div class="py-3 flex justify-between items-center">
+                  <dt class="font-bold text-stone-500">Capacidad de Despacho:</dt>
+                  <dd class="font-bold text-brand-verde text-right">+50 Toneladas Semanales</dd>
+                </div>
+                <div class="py-3 flex justify-between items-center">
+                  <dt class="font-bold text-stone-500">Tipo de Embalaje:</dt>
+                  <dd class="font-bold text-brand-negro text-right">Canastilla Plástica / Bulto / Huacal</dd>
+                </div>
+                <div class="py-3 flex justify-between items-center">
+                  <dt class="font-bold text-stone-500">Cobertura:</dt>
+                  <dd class="font-bold text-brand-rojo text-right">Nacional (Eje Cafetero, Bogotá, Valle)</dd>
+                </div>
+              </dl>
+
+              <div class="mt-6 bg-brand-verde text-white p-4 rounded-xl borde-manual-sm flex items-center justify-between">
+                <div>
+                  <p class="text-xs font-semibold text-brand-crema">Atención Directa Gerencia de Ventas</p>
+                  <p class="font-display text-xl font-bold">313 722 0982</p>
+                </div>
+                <a href="tel:3137220982" class="btn-brutal bg-brand-amarillo text-brand-negro p-3 rounded-lg text-lg">
+                  <i class="fa-solid fa-phone"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE CONTACTO Y COTIZACIÓN MAYORISTA -->
+    <section id="contacto" class="py-16 bg-white border-b-4 border-brand-negro">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <!-- Información y Mapa / Datos de contacto -->
+          <div class="lg:col-span-5 space-y-6">
+            <span class="bg-brand-amarillo text-brand-negro px-4 py-1 rounded-full font-subheading font-bold text-xs sm:text-sm border-2 border-brand-negro uppercase">
+              ARMENIA • QUINDÍO
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-display font-black text-brand-negro">
+              Hablemos de Negocios
+            </h2>
+            <p class="text-stone-700 font-medium text-base">
+              Si administra una cadena de supermercados, restaurante institucional o negocio mayorista, agende una visita a nuestra bodega o solicite muestra de calidad.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              <div class="flex items-center gap-4 bg-brand-crema p-4 rounded-2xl borde-manual-sm">
+                <div class="w-12 h-12 rounded-xl bg-brand-verde text-white flex items-center justify-center text-xl borde-manual-sm shrink-0">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-sm text-brand-negro">Dirección de Despacho</h3>
+                  <p class="text-xs sm:text-sm font-semibold text-stone-600">Cra. 19 #40, Armenia, Quindío (A 05 km de la Central Mayorista Mercar)</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4 bg-brand-crema p-4 rounded-2xl borde-manual-sm">
+                <div class="w-12 h-12 rounded-xl bg-brand-amarillo text-brand-negro flex items-center justify-center text-xl borde-manual-sm shrink-0">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-sm text-brand-negro">Línea Telefónica & WhatsApp</h3>
+                  <p class="text-xs sm:text-sm font-semibold text-stone-600">313 722 0982</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4 bg-brand-crema p-4 rounded-2xl borde-manual-sm">
+                <div class="w-12 h-12 rounded-xl bg-brand-rojo text-white flex items-center justify-center text-xl borde-manual-sm shrink-0">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-sm text-brand-negro">Correo Electrónico Oficial</h3>
+                  <p class="text-xs sm:text-sm font-semibold text-stone-600">comercializadoramicosecha@hotmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulario de Cotización Inmediata -->
+          <div class="lg:col-span-7">
+            <div class="bg-brand-crema p-6 sm:p-8 rounded-3xl borde-manual shadow-brand-lg">
+              <h3 class="font-display font-black text-2xl text-brand-negro mb-1">Cotizador Directo Mayorista</h3>
+              <p class="text-xs sm:text-sm text-stone-600 font-semibold mb-6">Complete los datos y recibirá la cotización por WhatsApp con flete incluido.</p>
+
+              <form id="quoteForm" onsubmit="handleQuoteSubmit(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-bold text-brand-negro mb-1">Empresa / Razón Social *</label>
+                    <input type="text" id="quoteCompany" required placeholder="Ej. Supermercados del Café" class="w-full px-3 py-2.5 bg-white rounded-xl borde-manual-sm text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-brand-verde">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-brand-negro mb-1">Nombre de Contacto *</label>
+                    <input type="text" id="quoteName" required placeholder="Ej. Juan Carlos Pérez" class="w-full px-3 py-2.5 bg-white rounded-xl borde-manual-sm text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-brand-verde">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-bold text-brand-negro mb-1">Ciudad de Destino *</label>
+                    <input type="text" id="quoteCity" required placeholder="Ej. Bogotá / Cali / Pereira / Medellín" class="w-full px-3 py-2.5 bg-white rounded-xl borde-manual-sm text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-brand-verde">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-brand-negro mb-1">Teléfono Móvil *</label>
+                    <input type="tel" id="quotePhone" required placeholder="Ej. 310 123 4567" class="w-full px-3 py-2.5 bg-white rounded-xl borde-manual-sm text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-brand-verde">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-brand-negro mb-1">Frutas y Volumen Estimado *</label>
+                  <textarea id="quoteDetails" required rows="3" placeholder="Ej: 50 canastillas de Plátano Hartón, 30 canastillas de Aguacate Hass y 20 bultos de Naranja..." class="w-full px-3 py-2.5 bg-white rounded-xl borde-manual-sm text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-brand-verde"></textarea>
+                </div>
+
+                <button type="submit" class="w-full btn-brutal bg-brand-verde text-white py-3.5 rounded-xl font-subheading font-black text-lg flex items-center justify-center gap-2">
+                  <i class="fa-brands fa-whatsapp text-2xl"></i>
+                  <span>Enviar Cotización por WhatsApp</span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA (Regla de Contraste Pág. 7: Fondo Negro con Comercializadora en Quicksand Blanco) -->
+  <footer class="bg-brand-negro text-white border-t-4 border-brand-negro pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b-2 border-stone-800">
+        
+        <!-- Columna 1: Logo en Fondo Oscuro según Manual de Marca pág. 7 -->
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <svg class="h-20 w-auto" viewBox="0 0 460 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="footerRedLeaf" x1="170" y1="140" x2="260" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#C51815"/>
+                  <stop offset="50%" stop-color="#DF2723"/>
+                  <stop offset="100%" stop-color="#F24430"/>
+                </linearGradient>
+                <linearGradient id="footerFlame" x1="210" y1="140" x2="250" y2="85" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#E65100"/>
+                  <stop offset="50%" stop-color="#F5C518"/>
+                  <stop offset="100%" stop-color="#FDE047"/>
+                </linearGradient>
+                <linearGradient id="footerGreenDark" x1="280" y1="145" x2="380" y2="20" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#2D8438"/>
+                  <stop offset="50%" stop-color="#4B9A24"/>
+                  <stop offset="100%" stop-color="#7DBC1E"/>
+                </linearGradient>
+                <linearGradient id="footerGreenLight" x1="290" y1="130" x2="410" y2="10" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#7DBC1E"/>
+                  <stop offset="60%" stop-color="#9AE225"/>
+                  <stop offset="100%" stop-color="#BEF248"/>
+                </linearGradient>
+                <linearGradient id="footerTextGrad" x1="230" y1="30" x2="230" y2="240" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#3FA84A"/>
+                  <stop offset="35%" stop-color="#2D8438"/>
+                  <stop offset="75%" stop-color="#216E2B"/>
+                  <stop offset="100%" stop-color="#175122"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Hojas Oficiales -->
+              <path d="M 172 135 C 160 90, 195 48, 258 42 C 267 76, 264 118, 222 144 C 196 150, 178 146, 172 135 Z" fill="url(#footerRedLeaf)"/>
+              <path d="M 214 135 C 205 115, 218 95, 252 86 C 248 108, 238 128, 214 135 Z" fill="url(#footerFlame)"/>
+              
+              <path d="M 276 138 C 270 95, 290 55, 396 12 C 418 68, 388 125, 305 142 C 290 144, 280 142, 276 138 Z" fill="url(#footerGreenDark)"/>
+              <path d="M 288 126 C 290 85, 320 45, 396 12 C 375 75, 350 110, 288 126 Z" fill="url(#footerGreenLight)"/>
+              <path d="M 282 136 C 314 96, 352 54, 394 14" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.95"/>
+
+              <!-- Base amarilla característica -->
+              <path d="M 44 212 C 58 226, 95 232, 130 226 C 158 238, 204 238, 235 228 C 265 242, 310 240, 335 228 C 362 238, 400 234, 420 216 C 428 206, 424 195, 424 195 C 438 215, 416 248, 375 252 C 335 255, 305 248, 280 252 C 240 256, 185 258, 140 252 C 90 248, 40 240, 32 216 C 30 206, 38 198, 44 212 Z" fill="#F5C518"/>
+
+              <!-- Borde blanco tenue para resalte sobre fondo negro -->
+              <g stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round" opacity="0.25">
+                <text x="82" y="128" font-family="'Fredoka', sans-serif" font-weight="900" font-size="96" letter-spacing="-3">Mi</text>
+                <text x="48" y="218" font-family="'Fredoka', sans-serif" font-weight="900" font-size="108" letter-spacing="-5">Cosecha</text>
+              </g>
+
+              <!-- Silueta negra del logo -->
+              <g stroke="#1A1A1A" stroke-width="20" stroke-linejoin="round">
+                <text x="82" y="128" font-family="'Fredoka', sans-serif" font-weight="900" font-size="96" letter-spacing="-3">Mi</text>
+                <text x="48" y="218" font-family="'Fredoka', sans-serif" font-weight="900" font-size="108" letter-spacing="-5">Cosecha</text>
+              </g>
+
+              <!-- Relleno de texto inflado -->
+              <text x="82" y="128" font-family="'Fredoka', sans-serif" font-weight="900" font-size="96" letter-spacing="-3" fill="url(#footerTextGrad)">Mi</text>
+              <text x="48" y="218" font-family="'Fredoka', sans-serif" font-weight="900" font-size="108" letter-spacing="-5" fill="url(#footerTextGrad)">Cosecha</text>
+
+              <!-- REGLA DEL MANUAL PÁG. 7: Sobre fondo oscuro, 'COMERCIALIZADORA' se escribe en Quicksand Blanco -->
+              <text x="235" y="286" text-anchor="middle" font-family="'Quicksand', sans-serif" font-weight="800" font-size="28" fill="#FFFFFF" letter-spacing="7">COMERCIALIZADORA</text>
+            </svg>
+          </div>
+          <p class="text-stone-300 text-xs sm:text-sm font-medium leading-relaxed">
+            Comercializadora quindiana con 25 años de trayectoria y 12 años abasteciendo a almacenes de cadena bajo la promesa: <em>del campo a tu mesa</em>.
+          </p>
+        </div>
+
+        <!-- Columna 2: Enlaces Rápidos -->
+        <div>
+          <h4 class="font-display text-lg font-black text-brand-amarillo mb-4">Navegación</h4>
+          <ul class="space-y-2 text-sm font-semibold text-stone-300">
+            <li><a href="#inicio" class="hover:text-brand-amarillo transition">Inicio</a></li>
+            <li><a href="#nosotros" class="hover:text-brand-amarillo transition">Quiénes Somos</a></li>
+            <li><a href="#mercado" class="hover:text-brand-amarillo transition">Catálogo Mayorista de Frutas</a></li>
+            <li><a href="#calidad" class="hover:text-brand-amarillo transition">Normas ISO de Calidad</a></li>
+            <li><a href="#contacto" class="hover:text-brand-amarillo transition">Cotizaciones por Camión</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Municipios de Origen Quindío -->
+        <div>
+          <h4 class="font-display text-lg font-black text-brand-amarillo mb-4">Cosecha Quindiana</h4>
+          <p class="text-xs text-stone-400 mb-3">Acopio diario en los principales municipios productores:</p>
+          <div class="flex flex-wrap gap-1.5 text-xs font-bold text-stone-300">
+            <span class="bg-stone-800 px-2 py-1 rounded">Armenia</span>
+            <span class="bg-stone-800 px-2 py-1 rounded">La Tebaida</span>
+            <span class="bg-stone-800 px-2 py-1 rounded">Montenegro</span>
+            <span class="bg-stone-800 px-2 py-1 rounded">Quimbaya</span>
+            <span class="bg-stone-800 px-2 py-1 rounded">Calarcá</span>
+            <span class="bg-stone-800 px-2 py-1 rounded">Circasia</span>
+            <span class="bg-stone-800 px-2 py-1 rounded">Pijao</span>
+            <span class="bg-stone-800 px-2 py-1 rounded">Génova</span>
+          </div>
+        </div>
+
+        <!-- Columna 4: Contacto Oficial del Manual de Marca (Pág. 10 & 11) -->
+        <div>
+          <h4 class="font-display text-lg font-black text-brand-amarillo mb-4">Contacto Oficial</h4>
+          <ul class="space-y-3 text-xs sm:text-sm font-medium text-stone-300">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-brand-rojo mt-1"></i>
+              <span>Cra. 19 #40, Armenia, Quindío<br><strong class="text-white">05 km Central Mayorista Mercar</strong></span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-brand-verdeHoja"></i>
+              <span>313 722 0982</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-brand-amarillo"></i>
+              <span class="break-all">comercializadoramicosecha@hotmail.com</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright y Créditos de Manual -->
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-semibold text-stone-400">
+        <p>© 2026 Mi Cosecha Comercializadora S.A.S. Armenia, Quindío. Todos los derechos reservados.</p>
+        <p>Identidad visual bajo Manual de Marca Oficial (25 Años • Normas ISO).</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODAL / DRAWER DEL CARRITO MAYORISTA -->
+  <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden pointer-events-none transition-opacity duration-300 opacity-0">
+    <!-- Backdrop oscuro -->
+    <div id="cartBackdrop" onclick="toggleCart()" class="absolute inset-0 bg-black/60 transition-opacity backdrop-blur-sm"></div>
+
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+      <div class="w-screen max-w-md bg-white border-l-4 border-brand-negro shadow-2xl flex flex-col pointer-events-auto">
+        
+        <!-- Header del Carrito -->
+        <div class="p-5 bg-brand-amarillo border-b-3 border-brand-negro flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-cart-flatbed text-2xl text-brand-negro"></i>
+            <div>
+              <h2 class="font-display font-black text-xl text-brand-negro leading-none">Pedido Mayorista</h2>
+              <span class="text-xs font-bold text-stone-700">Cotización directa para despachos</span>
+            </div>
+          </div>
+          <button onclick="toggleCart()" class="btn-brutal bg-white p-2 rounded-xl text-brand-negro text-lg">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <!-- Contenido de los ítems del carrito -->
+        <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-4 space-y-3 bg-brand-crema">
+          <!-- Renderizado por JS -->
+        </div>
+
+        <!-- Resumen y Checkout por WhatsApp -->
+        <div class="p-5 bg-white border-t-3 border-brand-negro space-y-4">
+          <div class="space-y-1.5 text-sm font-semibold">
+            <div class="flex justify-between text-stone-600">
+              <span>Total de Bultos / Canastillas:</span>
+              <span id="cartTotalUnits" class="font-black text-brand-negro">0 unidades</span>
+            </div>
+            <div class="flex justify-between text-base font-black border-t border-stone-200 pt-2 text-brand-negro">
+              <span>Subtotal Estimado:</span>
+              <span id="cartSubtotal" class="text-brand-verde">$0 COP</span>
+            </div>
+            <p class="text-[11px] text-stone-500 italic">* Precios base por volumen. Flete consolidado según tonelaje y destino final.</p>
+          </div>
+
+          <div class="space-y-2">
+            <button onclick="checkoutWhatsApp()" class="w-full btn-brutal bg-brand-verde text-white py-3 rounded-xl font-subheading font-black text-base flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-2xl"></i>
+              <span>Cerrar Pedido con Asesor Comercial</span>
+            </button>
+            <button onclick="clearCart()" class="w-full text-xs font-bold text-stone-500 hover:text-brand-rojo py-1 transition text-center">
+              Vaciar Canastilla de Pedido
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // CATÁLOGO DE PRODUCTOS MAYORISTAS DE MI COSECHA (Armenia, Quindío)
+    const products = [
+      {
+        id: 1,
+        name: "Plátano Dominico-Hartón",
+        category: "musaceas",
+        origin: "Montenegro / Quimbaya",
+        presentation: "Canastilla plástica (20 kg)",
+        price: 52000,
+        minOrder: "Mínimo 10 canastillas",
+        image: "https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=600&auto=format&fit=crop&q=80",
+        badge: "Insignia Quindío",
+        desc: "Plátano verde de primera calidad, calibre parejo para fritura o plaza de mercado."
+      },
+      {
+        id: 2,
+        name: "Aguacate Hass de Ladera",
+        category: "cordillera",
+        origin: "Pijao / Génova / Calarcá",
+        presentation: "Canastilla (12 kg calibrado)",
+        price: 68000,
+        minOrder: "Mínimo 8 canastillas",
+        image: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=600&auto=format&fit=crop&q=80",
+        badge: "Calidad ISO",
+        desc: "Aguacate con alto porcentaje de materia seca, ideal para maduración programada."
+      },
+      {
+        id: 3,
+        name: "Naranja Valencia para Jugueras",
+        category: "citricos",
+        origin: "La Tebaida, Quindío",
+        presentation: "Bulto de malla (45 kg)",
+        price: 78000,
+        minOrder: "Mínimo 5 bultos",
+        image: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?w=600&auto=format&fit=crop&q=80",
+        badge: "Alto Rendimiento",
+        desc: "Naranja dulce con máximo grado Brix y abundante jugo para expendios mayoristas."
+      },
+      {
+        id: 4,
+        name: "Maracuyá de Exportación",
+        category: "cordillera",
+        origin: "Quimbaya / La Tebaida",
+        presentation: "Canastilla (14 kg)",
+        price: 54000,
+        minOrder: "Mínimo 6 canastillas",
+        image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&auto=format&fit=crop&q=80",
+        badge: "Seleccionado",
+        desc: "Fruta pesada y brillante, seleccionada manualmente sin perforaciones."
+      },
+      {
+        id: 5,
+        name: "Lulo de Castilla Silvestre",
+        category: "cordillera",
+        origin: "Cordillera Quindiana",
+        presentation: "Canastilla (15 kg)",
+        price: 72000,
+        minOrder: "Mínimo 5 canastillas",
+        image: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=600&auto=format&fit=crop&q=80",
+        badge: "Gran Aroma",
+        desc: "Lulo con pulpa ácida densa y corteza firme para transporte seguro."
+      },
+      {
+        id: 6,
+        name: "Limón Tahití Verde Intenso",
+        category: "citricos",
+        origin: "La Tebaida / Valle",
+        presentation: "Bulto / Canastilla (20 kg)",
+        price: 60000,
+        minOrder: "Mínimo 10 bultos",
+        image: "https://images.unsplash.com/photo-1590502593747-42a996133562?w=600&auto=format&fit=crop&q=80",
+        badge: "Sin Semilla",
+        desc: "Cáscara verde oscura y paredes finas para mayor extracción de jugo."
+      },
+      {
+        id: 7,
+        name: "Piña Oro Miel MD2",
+        category: "tropicales",
+        origin: "Quimbaya, Quindío",
+        presentation: "Huacal (8 a 10 unidades grandes)",
+        price: 45000,
+        minOrder: "Mínimo 10 huacales",
+        image: "https://images.unsplash.com/photo-1550828520-4cb496926fc9?w=600&auto=format&fit=crop&q=80",
+        badge: "Extra Dulce",
+        desc: "Piña calibrada en color y madurez con corona tratada."
+      },
+      {
+        id: 8,
+        name: "Mango Tommy Atkins",
+        category: "tropicales",
+        origin: "Centro de Acopio Mercar",
+        presentation: "Canastilla (18 kg)",
+        price: 58000,
+        minOrder: "Mínimo 8 canastillas",
+        image: "https://images.unsplash.com/photo-1553279768-865429fa0078?w=600&auto=format&fit=crop&q=80",
+        badge: "Larga Vida",
+        desc: "Mango rojo resistente al flete prolongado con pulpa firme."
+      }
+    ];
+
+    // ESTADO DEL CARRITO EN MEMORIA
+    let cart = [];
+    let currentCategory = 'todos';
+
+    // RENDERIZADO DEL CATÁLOGO
+    function renderProducts() {
+      const grid = document.getElementById('productGrid');
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+
+      const filtered = products.filter(p => {
+        const matchesCat = (currentCategory === 'todos') || (p.category === currentCategory);
+        const matchesSearch = p.name.toLowerCase().includes(searchTerm) || 
+                              p.origin.toLowerCase().includes(searchTerm) ||
+                              p.presentation.toLowerCase().includes(searchTerm);
+        return matchesCat && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full bg-white p-8 rounded-2xl borde-manual text-center">
+            <i class="fa-solid fa-seedling text-4xl text-brand-verde mb-2"></i>
+            <h3 class="font-display font-bold text-xl">No encontramos esa fruta en la cosecha actual</h3>
+            <p class="text-sm text-stone-600 mt-1">Consúltenos directamente por WhatsApp para cosechas bajo encargo.</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => `
+        <div class="bg-white rounded-2xl borde-manual shadow-brand flex flex-col justify-between overflow-hidden group hover:-translate-y-1 transition-transform duration-200">
+          <div>
+            <!-- Imagen del Producto -->
+            <div class="relative h-48 w-full overflow-hidden bg-stone-100 border-b-2 border-brand-negro">
+              <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/2D8438/FFFFFF?text=${encodeURIComponent(p.name)}'">
+              <span class="absolute top-3 left-3 bg-brand-amarillo text-brand-negro text-xs font-black px-2.5 py-1 rounded-md border-2 border-brand-negro shadow-brand-sm">
+                ${p.badge}
+              </span>
+              <span class="absolute bottom-2 right-2 bg-brand-negro/80 text-white text-[11px] font-bold px-2 py-0.5 rounded">
+                <i class="fa-solid fa-location-dot text-brand-amarillo mr-0.5"></i> ${p.origin}
+              </span>
+            </div>
+
+            <!-- Información Mayorista -->
+            <div class="p-4 space-y-2">
+              <h3 class="font-display font-black text-xl text-brand-negro leading-snug">${p.name}</h3>
+              <p class="text-xs text-stone-600 font-medium leading-relaxed">${p.desc}</p>
+              
+              <div class="bg-brand-crema p-2.5 rounded-xl border border-stone-300 space-y-1 text-xs">
+                <div class="flex justify-between font-bold text-stone-700">
+                  <span>Presentación:</span>
+                  <span class="text-brand-negro">${p.presentation}</span>
+                </div>
+                <div class="flex justify-between font-bold text-brand-rojo">
+                  <span>Despacho:</span>
+                  <span>${p.minOrder}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pie de tarjeta con precio y botón -->
+          <div class="p-4 pt-0">
+            <div class="flex items-center justify-between pt-3 border-t border-stone-200 mb-3">
+              <div>
+                <span class="text-[11px] font-bold text-stone-500 block leading-none">Precio x Unidad/Caja</span>
+                <span class="font-display font-black text-2xl text-brand-verde">$${p.price.toLocaleString('es-CO')}</span>
+              </div>
+            </div>
+
+            <button onclick="addToCart(${p.id})" class="w-full btn-brutal bg-brand-amarillo text-brand-negro py-2.5 rounded-xl font-subheading font-bold text-sm flex items-center justify-center gap-2">
+              <i class="fa-solid fa-plus text-brand-negro"></i>
+              <span>Agregar al Pedido</span>
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // MANEJO DE CATEGORÍAS
+    function setCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.category-btn').forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.classList.remove('bg-white', 'text-brand-negro');
+          btn.classList.add('bg-brand-negro', 'text-white');
+        } else {
+          btn.classList.remove('bg-brand-negro', 'text-white');
+          btn.classList.add('bg-white', 'text-brand-negro');
+        }
+      });
+      renderProducts();
+    }
+
+    function filterProducts() {
+      renderProducts();
+    }
+
+    // FUNCIONES DEL CARRITO MAYORISTA
+    function addToCart(productId) {
+      const product = products.find(p => p.id === productId);
+      const existing = cart.find(item => item.id === productId);
+
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...product, qty: 1 });
+      }
+
+      updateCartUI();
+      showToast(`+1 ${product.name} agregado al pedido mayorista`);
+    }
+
+    function updateQty(productId, delta) {
+      const item = cart.find(i => i.id === productId);
+      if (!item) return;
+
+      item.qty += delta;
+      if (item.qty <= 0) {
+        cart = cart.filter(i => i.id !== productId);
+      }
+      updateCartUI();
+    }
+
+    function clearCart() {
+      cart = [];
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const countBadge = document.getElementById('cartCountBadge');
+      const container = document.getElementById('cartItemsContainer');
+      const totalUnits = document.getElementById('cartTotalUnits');
+      const subtotalEl = document.getElementById('cartSubtotal');
+
+      const totalItems = cart.reduce((acc, curr) => acc + curr.qty, 0);
+      const totalMoney = cart.reduce((acc, curr) => acc + (curr.price * curr.qty), 0);
+
+      countBadge.innerText = totalItems;
+      totalUnits.innerText = `${totalItems} canastillas / bultos`;
+      subtotalEl.innerText = `$${totalMoney.toLocaleString('es-CO')} COP`;
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="h-64 flex flex-col items-center justify-center text-center p-6 text-stone-500">
+            <i class="fa-solid fa-basket-shopping text-5xl text-stone-400 mb-3"></i>
+            <p class="font-display font-bold text-lg text-brand-negro">Su pedido está vacío</p>
+            <p class="text-xs text-stone-600 mt-1">Añada canastillas de frutas del catálogo para consolidar su cotización.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = cart.map(item => `
+        <div class="bg-white p-3.5 rounded-xl borde-manual-sm shadow-brand-sm flex items-center justify-between gap-3">
+          <div class="flex-1">
+            <h4 class="font-display font-bold text-sm text-brand-negro leading-tight">${item.name}</h4>
+            <p class="text-[11px] text-stone-500 font-semibold">${item.presentation}</p>
+            <p class="text-xs font-black text-brand-verde mt-1">$${(item.price * item.qty).toLocaleString('es-CO')}</p>
+          </div>
+
+          <div class="flex items-center gap-2 bg-brand-crema px-2 py-1 rounded-lg border border-stone-300">
+            <button onclick="updateQty(${item.id}, -1)" class="w-6 h-6 rounded bg-white font-black text-xs border border-brand-negro hover:bg-brand-rojo hover:text-white transition">
+              -
+            </button>
+            <span class="font-subheading font-bold text-sm w-5 text-center">${item.qty}</span>
+            <button onclick="updateQty(${item.id}, 1)" class="w-6 h-6 rounded bg-white font-black text-xs border border-brand-negro hover:bg-brand-verde hover:text-white transition">
+              +
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // CHECKOUT DE WHATSAPP CON FORMATO COMERCIAL B2B
+    function checkoutWhatsApp() {
+      if (cart.length === 0) {
+        showToast("Su pedido está vacío. Agregue productos primero.");
+        return;
+      }
+
+      let message = `*SOLICITUD DE PEDIDO MAYORISTA - MI COSECHA S.A.S.*\n`;
+      message += `*Origen:* Armenia, Quindío (Central Mayorista Mercar)\n`;
+      message += `----------------------------------------\n`;
+      
+      cart.forEach((item, index) => {
+        message += `${index + 1}. *${item.name}*\n`;
+        message += `   • Cantidad: ${item.qty} (${item.presentation})\n`;
+        message += `   • Subtotal: $${(item.price * item.qty).toLocaleString('es-CO')} COP\n`;
+      });
+
+      const totalItems = cart.reduce((acc, curr) => acc + curr.qty, 0);
+      const totalMoney = cart.reduce((acc, curr) => acc + (curr.price * curr.qty), 0);
+
+      message += `----------------------------------------\n`;
+      message += `*Total Unidades:* ${totalItems} bultos/canastillas\n`;
+      message += `*Valor Estimado:* $${totalMoney.toLocaleString('es-CO')} COP\n\n`;
+      message += `Por favor cotizar flete y disponibilidad de despacho para mi ciudad. Gracias.`;
+
+      const encoded = encodeURIComponent(message);
+      window.open(`https://wa.me/573137220982?text=${encoded}`, '_blank');
+    }
+
+    // FORMULARIO DE COTIZACIÓN
+    function handleQuoteSubmit(e) {
+      e.preventDefault();
+      const company = document.getElementById('quoteCompany').value;
+      const name = document.getElementById('quoteName').value;
+      const city = document.getElementById('quoteCity').value;
+      const phone = document.getElementById('quotePhone').value;
+      const details = document.getElementById('quoteDetails').value;
+
+      let msg = `*NUEVA COTIZACIÓN MAYORISTA (WEB)*\n`;
+      msg += `*Empresa:* ${company}\n`;
+      msg += `*Contacto:* ${name}\n`;
+      msg += `*Ciudad Destino:* ${city}\n`;
+      msg += `*Teléfono:* ${phone}\n`;
+      msg += `*Requerimiento:* ${details}\n\n`;
+      msg += `Solicito propuesta comercial y tiempos de entrega desde Armenia.`;
+
+      window.open(`https://wa.me/573137220982?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    // TOGGLES DE UI
+    function toggleCart() {
+      const drawer = document.getElementById('cartDrawer');
+      if (drawer.classList.contains('opacity-0')) {
+        drawer.classList.remove('opacity-0', 'pointer-events-none');
+      } else {
+        drawer.classList.add('opacity-0', 'pointer-events-none');
+      }
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // NOTIFICACIÓN TOAST SENCILLA
+    function showToast(text) {
+      let toast = document.getElementById('toastNotification');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'toastNotification';
+        toast.className = 'fixed bottom-5 left-1/2 -translate-x-1/2 z-50 bg-brand-negro text-white px-5 py-3 rounded-2xl borde-manual shadow-brand text-xs sm:text-sm font-subheading font-bold transition-opacity duration-300 opacity-0 pointer-events-none flex items-center gap-2';
+        document.body.appendChild(toast);
+      }
+      toast.innerHTML = `<i class="fa-solid fa-circle-check text-brand-amarillo"></i> <span>${text}</span>`;
+      toast.classList.remove('opacity-0');
+      setTimeout(() => {
+        toast.classList.add('opacity-0');
+      }, 2400);
+    }
+
+    // INICIALIZACIÓN
+    window.onload = function() {
+      renderProducts();
+      updateCartUI();
+    };
+  </script>
+</body>
+</html>
